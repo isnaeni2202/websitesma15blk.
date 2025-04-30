@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMA NEGERI 15 BULUKUMBA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #4163e8;
+      color: #f8f8f8;
+      text-align: center;
+      padding: 7px;
+    }
+
+    nav {
+      background-color: #340af1;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 9px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 8px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/2/26/Bulukumba_Indonesia.jpg') center/cover no-repeat;
+      height: 95px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(17, 151, 234);
+      font-size: 1.4em;
+      text-shadow: 2px 2px 5px #0f0e0e;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      background-color: white;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    footer {
+      background-color: #80eb0d;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .school-photo {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #010b03;
+    }
+
+    h3 {
+      color: #0808df;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 10px;
+    }
+
+    .dashboard {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .card {
+      background-color: #007bff;
+      color: white;
+      padding: 5px;
+      border-radius: 8px;
+      width: 20%;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      font-size: 1.0em;
+    }
+
+    .card p {
+      font-size: 1.2em;
+    }
+
+    .card .icon {
+      font-size: 3em;
+      margin-bottom: 8px;
+    }
+
+    .charts-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .chart-box {
+      width: 48%;
+    }
+
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <img src="SMAN 15 logo.png" alt="Logo SMA 15 Bulukumba" style="width: 100px; border-radius: 50%; margin-bottom: 10px;">
+    <h1>SMA Negeri 15 Bulukumba</h1>
+    <h2>Jl. Poros Balleanging, Km.12 Kec. Ujung Loe, Kab. Bulukumba</h2>
+  </header>
+
+  <div class="hero" id="Dashboard">
+    <h2>Selamat Datang di Website SMA Negeri 15 Bulukumba</h2>
+  </div>
+
+  <!-- Navigation Section -->
+  <nav>
+    <a href="javascript:void(0);" onclick="showSection('Dashboard')">Dashboard</a>
+    <a href="javascript:void(0);" onclick="showSection('Beranda')">Beranda</a>
+    <a href="javascript:void(0);" onclick="showSection('Profil')">Profil</a>
+    <a href="javascript:void(0);" onclick="showSection('VisiMisi')">Visi & Misi</a>
+    <a href="javascript:void(0);" onclick="showSection('Struktur')">Struktur</a>
+    <a href="javascript:void(0);" onclick="showSection('Program')">Program</a>
+    <a href="javascript:void(0);" onclick="showSection('Galeri')">Galeri</a>
+    <a href="javascript:void(0);" onclick="showSection('Berita')">Berita</a>
+    <a href="javascript:void(0);" onclick="showSection('Kontak')">Kontak</a>
+  </nav>
+
+  <!-- Other Sections -->
+  <!-- Other Sections -->
+<!-- Other Sections -->
+<div id="Beranda" class="section">
+    <h2 style="font-family: 'Arial', sans-serif; font-size: 2.5em; color: #220cea; margin-bottom: 15px; text-align: center;">
+      Beranda
+    </h2>
+    
+    <!-- Teks sambutan untuk Beranda -->
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.2em; line-height: 1.8; color: #0a0a0b; text-align: center;">
+      <strong>Selamat Datang di Gerbang Ilmu dan Prestasi UPT SMAN 15 Bulukumba!</strong><br>
+      Merangkai ilmu dengan dedikasi, menorehkan prestasi dengan semangat, dan menanamkan karakter dengan keteladanan. 
+      Inilah ladang ilmu UPT SMAN 15 Bulukumba, tempat benih potensi disemai, dirawat dengan kasih sayang, dan dipanen menjadi generasi pemimpin yang berakhlak dan berprestasi. 
+      Selamat datang di embarkasi perjalanan pendidikan yang menginspirasi dan memberdayakan!
+    </p>
+
+    <!-- Sambutan Kepala Sekolah -->
+    <h4 style="font-family: 'Arial', sans-serif; font-size: 1.8em; color: #2980b9; margin-top: 20px; text-align: center;">
+      Salam Hangat dari Jantung Pendidikan SMAN 15 Bulukumba,
+    </h4>
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.2em; line-height: 1.8; color: #34495e; text-align: center;">
+      Assalamualaikum Warahmatullahi Wabarakatuh, 
+      Puji syukur kehadirat Allah SWT atas rahmat dan karunia-Nya. Selamat datang di gerbang virtual UPT Sekolah Menengah Atas Negeri 15 Bulukumba!<br><br>
+
+      Lebih dari sekadar lembaga pendidikan, SMAN 15 Bulukumba adalah rumah kedua bagi para siswa yang bersemangat untuk meraih mimpi dan mengembangkan potensi diri. 
+      Sejak berdiri pada tanggal 11 November 2011, kami terus berkomitmen untuk menghadirkan pendidikan berkualitas yang berlandaskan pada nilai-nilai agama, budaya, dan ilmu pengetahuan.<br><br>
+
+      Di sini, Anda akan menemukan lingkungan belajar yang inovatif, inklusif, dan inspiratif. Kami percaya bahwa setiap siswa adalah individu yang unik dengan potensi yang luar biasa. 
+      Oleh karena itu, kami berupaya untuk memfasilitasi perkembangan mereka secara holistik, tidak hanya dalam bidang akademik, tetapi juga dalam pembentukan karakter, pengembangan bakat, dan kesiapan menghadapi tantangan global.<br><br>
+
+      Kami mengundang Anda untuk menjelajahi lebih jauh tentang SMAN 15 Bulukumba melalui website ini. Temukan berbagai informasi menarik tentang program unggulan kami, kegiatan ekstrakurikuler yang beragam, 
+      fasilitas yang memadai, serta kisah sukses para siswa dan alumni kami.<br><br>
+
+      Mari bersama-sama kita wujudkan generasi emas Bulukumba yang cerdas, berakhlak mulia, dan berdaya saing!<br><br>
+
+      Wassalamualaikum Warahmatullahi Wabarakatuh,<br><br>
+
+      Jusrianti, S.Si.,M.Pd<br>
+      Kepala UPT SMAN 15 Bulukumba
+    </p>
+
+    <!-- Sorotan Utama Sekolah -->
+    <h4 style="font-family: 'Arial', sans-serif; font-size: 1.8em; color: #2980b9; margin-top: 20px; text-align: center;">
+      Sorotan Utama Sekolah
+    </h4>
+    <ul style="font-family: 'Verdana', sans-serif; font-size: 1.2em; color: #34495e; line-height: 1.8; text-align: left; margin-left: 40px;">
+      <li><strong>Pendidikan Berkualitas dan Berorientasi Masa Depan:</strong> Kami menawarkan kurikulum yang relevan dan adaptif, didukung oleh metode pembelajaran yang inovatif dan pemanfaatan teknologi terkini.</li>
+      <li><strong>Pengembangan Karakter dan Kepemimpinan:</strong> Kami menanamkan nilai-nilai luhur, etika, dan jiwa kepemimpinan melalui berbagai program dan kegiatan yang terintegrasi.</li>
+      <li><strong>Ekstrakurikuler yang Mengembangkan Bakat dan Minat:</strong> Beragam pilihan ekstrakurikuler mulai dari olahraga, seni, hingga sains dan teknologi, memberikan wadah bagi siswa untuk mengembangkan potensi diri di luar akademik.</li>
+      <li><strong>Lingkungan Belajar yang Nyaman dan Mendukung:</strong> Kami menciptakan suasana sekolah yang aman, kondusif, dan penuh kekeluargaan, di mana setiap siswa merasa diterima dan termotivasi untuk belajar.</li>
+    </ul>
+
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.2em; line-height: 1.8; color: #34495e; text-align: center;">
+      <strong>Alamat:</strong> Jl. Poros Balleangin Km.12 Ujung Loe, Kabupaten Bulukumba, Sulawesi Selatan.
+    </p>
+</div>
+
+
+
+  <div id="Profil" class="section">
+    <!-- Menambahkan text-align: center pada heading Profil Sekolah -->
+    <h3 style="font-family: 'Arial', sans-serif; font-size: 2em; color: #220cea; margin-bottom: 15px; text-align: center;">
+      Profil Sekolah
+    </h3>
+    
+    <!-- Menambahkan text-align: center pada teks Selamat Datang -->
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.2em; line-height: 1.8; color: #0a0a0b; text-align: center;">
+      <strong>Selamat Datang di Gerbang Ilmu dan Prestasi UPT SMAN 15 Bulukumba!</strong><br>
+    </p>
+    
+    <!-- Menyesuaikan ukuran font pada paragraf ini agar sama dengan yang lain -->
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.2em; line-height: 1.8; color: #34495e; text-align: left;">
+      Di jantung Sulawesi Selatan, tepatnya di kilometer 12 Jalan Poros Balleangin, Ujung Loe, Kabupaten Bulukumba, berdiri kokoh sebuah institusi pendidikan yang tak hanya menjadi tempat menimba ilmu, namun juga rumah bagi lahirnya generasi-generasi berkarakter dan berprestasi: UPT Sekolah Menengah Atas Negeri 15 Bulukumba.
+    </p>
+    
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.2em; line-height: 1.8; color: #34495e; text-align: left;">
+      Mengukir sejarah sejak 11 November 2011, SMAN 15 Bulukumba hadir dengan visi yang kuat untuk menjadi garda terdepan dalam mencetak sumber daya manusia yang unggul, beriman, bertakwa, dan berwawasan global. Lebih dari sekadar bangunan fisik, sekolah ini adalah komunitas yang dinamis, tempat di mana semangat belajar dan inovasi terus bersemi.
+    </p>
+    
+    <h4 style="font-family: 'Arial', sans-serif; font-size: 1.8em; color: #2980b9; margin-top: 20px; text-align: center;">Mengapa Memilih UPT SMAN 15 Bulukumba?</h4>
+    <ul style="font-family: 'Verdana', sans-serif; font-size: 1.2em; color: #34495e; line-height: 1.8; text-align: left;">
+      <li><strong>Lokasi Strategis dengan Lingkungan Kondusif:</strong> Terletak di jalur utama yang mudah diakses, SMAN 15 Bulukumba menawarkan lingkungan belajar yang tenang dan mendukung perkembangan siswa secara holistik.</li>
+      <li><strong>Komitmen pada Kualitas Pendidikan:</strong> Kami berdedikasi untuk memberikan pendidikan yang berkualitas, didukung oleh tenaga pendidik yang kompeten dan bersemangat dalam membimbing setiap siswa mencapai potensi maksimalnya.</li>
+      <li><strong>Fasilitas yang Mendukung Pembelajaran:</strong> Ruang kelas yang nyaman, laboratorium yang lengkap, perpustakaan yang kaya akan sumber ilmu, serta fasilitas olahraga dan seni yang memadai, semuanya dirancang untuk menciptakan pengalaman belajar yang optimal.</li>
+      <li><strong>Ekosistem Pembelajaran yang Inklusif:</strong> Kami percaya bahwa setiap siswa adalah unik dan berharga. Oleh karena itu, kami menciptakan lingkungan belajar yang inklusif, menghargai perbedaan, dan mendorong kolaborasi serta Gotong Royong.</li>
+      <li><strong>Pengembangan Karakter dan Potensi Diri:</strong> Lebih dari sekadar akademik, kami fokus pada pembentukan karakter yang kuat, menanamkan nilai-nilai luhur, serta memfasilitasi pengembangan minat dan bakat siswa melalui beragam kegiatan ekstrakurikuler.</li>
+    </ul>
+  
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.2em; line-height: 1.8; color: #fd0d0d; text-align: center;">
+      <strong>Mari Bergabung dengan Keluarga Besar SMAN 15 Bulukumba!</strong><br>
+      Kami mengundang Anda untuk menjadi bagian dari perjalanan pendidikan yang inspiratif di UPT SMAN 15 Bulukumba. Bersama, kita wujudkan mimpi dan cita-cita, mengantarkan generasi muda Sulawesi Selatan menuju masa depan yang gemilang.
+    </p>
+  
+    <!-- Tempatkan foto atau video profil sekolah di sini -->
+    <div style="text-align: center;">
+      <h5 style="font-family: 'Arial', sans-serif; font-size: 1.6em; color: #2980b9; margin-top: 30px;">Foto Profil Sekolah:</h5>
+
+      <!-- Foto -->
+      <img src="download.jpg" alt="Profil Sekolah" style="max-width: 100%; height: auto; border-radius: 10px;">
+      
+        
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.2em; line-height: 1.8; color: #34495e; text-align: center;">
+      <strong>Alamat:</strong> Jl. Poros Balleangin Km.12 Ujung Loe, Kabupaten Bulukumba, Sulawesi Selatan.
+    </p>
+</div>
+
+  
+    </div>
+  </main>
+
+  </div>
+
+  <div id="VisiMisi" class="section">
+    <!-- Judul untuk Visi & Misi -->
+    <h4 style="font-family: 'Arial', sans-serif; font-size: 2.5em; color: #2980b9; margin-top: 20px; text-align: center;">
+        Visi & Misi
+    </h4>
+
+    <!-- Paragraf untuk Visi -->
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.4em; line-height: 1.8; color: #34495e; text-align: center;">
+        <strong>Visi:</strong><br>
+        Terwujudnya Peserta Didik yang Berkarakter Cerdas dan Qurani
+    </p>
+
+    <!-- Paragraf untuk Misi -->
+    <p style="font-family: 'Verdana', sans-serif; font-size: 1.4em; line-height: 1.8; color: #34495e; text-align: left;">
+        <strong>Misi:</strong><br>
+        1. Mewujudkan karakter peserta didik yang berlandaskan profil pelajar Pancasila.<br>
+        2. Mewujudkan peserta didik yang berprestasi di bidang OSN, O2SN, FLS2N, dan Ekstrakurikuler.<br>
+        3. Mewujudkan peserta didik yang mahir berliterasi, numerasi, dan TIK.<br>
+        4. Mewujudkan peserta didik yang mengaktualisasikan Nilai-nilai Al-Qur'an dalam kehidupan sehari-hari, pembiasaan sholat dhuha, literasi Al-Qur'an setiap awal pembelajaran, dan hafalan juz 30.<br>
+        5. Mewujudkan lingkungan sekolah yang hijau dan bersih.<br>
+        6. Mewujudkan persentase lulusan masuk perguruan tinggi melalui program Smart School dan pembelajaran skolastik.
+    </p>
+</div>
+
+
+
+<div id="Struktur" class="section">
+  <!-- Judul Struktur Organisasi -->
+  <h5 style="font-family: 'Arial', sans-serif; font-size: 2.5em; color: #2980b9; margin-bottom: 20px; text-align: center;">
+      Struktur Organisasi
+  </h5>
+
+  <!-- Paragraf untuk Deskripsi Organisasi -->
+  <p style="font-family: 'Verdana', sans-serif; font-size: 1.4em; line-height: 1.8; color: #34495e; text-align: center;">
+      Organisasi sekolah terdiri dari kepala sekolah, wakil kepala sekolah, dan berbagai bagian lainnya.
+  </p>
+
+  <!-- Daftar Struktur Organisasi -->
+  <ul style="font-family: 'Verdana', sans-serif; font-size: 1.4em; color: #34495e; line-height: 1.8; list-style-type: none; padding-left: 0; text-align: left;">
+      <li><strong>KEPALA UPT SMAN 15 Bulukumba:</strong> Jusrianti, S.Si, M.Si</li>
+      <li><strong>Wakasek Kurikulum:</strong> Musdaeni, S.Pd., M.Pd.Gr</li>
+      <li><strong>Wakasek Kesiswaan:</strong> Dr. Muhammad Yusran S.Kom., M.Kom, Gr.</li>
+      <li><strong>Wakasek Sapras:</strong> Jusnadi, S.Pd., M.Pd., Gr.</li>
+      <li><strong>Wakasek Humas:</strong> Sri Sulfaida Amir, S.Pd., Gr</li>
+      <li><strong>KEPALA TATA USAHA:</strong> Darwa</li>
+      <li><strong>Staf TU:</strong> Muliati, S.Pd</li>
+      <li><strong>Bendahara Sekolah:</strong> Rosdiana, S.Pd</li>
+      <li><strong>Koordinator Program Keahlian:</strong> [Nama Koordinator]</li>
+      <li><strong>KEPALA LABORATORIUM:</strong> Irawana, S.Pd, Gr</li>
+      <li><strong>KEPALA PERPUSTAKAAN:</strong> Mustamin</li>
+      <li><strong>PEMBINA OSIS:</strong> Andi Kasmawati, S.Pd, Gr</li>
+      <li><strong>KETUA OSIS:</strong> Ainun Israil</li>
+  </ul>
+</div>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Unggulan</title>
+  <style>
+    /* Styling untuk font dan ukuran teks */
+    body {
+      font-family: 'Arial', sans-serif; /* Font standar yang jelas */
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    .section {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px;
+    }
+    h6 {
+      font-size: 24px;
+      color: #333;
+      font-weight: bold;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+    .additional-text {
+      font-size: 18px;
+      color: #333;
+      margin-top: 10px;
+      line-height: 1.8;
+    }
+    /* Memberikan efek visual untuk teks tambahan */
+    .additional-text ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .additional-text ul li {
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div id="Program" class="section">
+    <h6>Program Unggulan</h6>
+    <p>Kelas Tahfidz Al-Qur'an, Program Literasi dan Numerasi, Ekstrakurikuler Pramuka, Paskibra, Seni Tari, Futsal.</p>
+    <!-- Teks tambahan yang ingin ditampilkan -->
+    <div class="additional-text">
+      <h6>Program Unggulan Lainnya</h6>
+      <ul>
+        <li>Kelas Tahfidz Al-Qur'an</li>
+        <li>Program Literasi dan Numerasi</li>
+        <li>Ekstrakurikuler Pramuka, Paskibra, Seni Tari, Futsal</li>
+        <li>Program Adiwiyata (Sekolah Berwawasan Lingkungan)</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
+
+
+  <div id="Galeri" class="section">
+    <h7>Galeri Sekolah</h7>
+    <p>Galeri foto dan video kegiatan sekolah.</p>
+  </div>
+
+  <div id="Berita" class="section">
+    <h8>Berita Terkini</h8>
+    <p>Informasi terbaru mengenai kegiatan sekolah dan prestasi siswa.</p>
+  </div>
+
+  <div id="Kontak" class="section">
+    <h9>Kontak</h9>
+    <p>Untuk informasi lebih lanjut, Anda dapat menghubungi kami di:</p>
+    <p>Email: sman15bulukumba@email.com</p>
+    <p>Telp: 085965045620</p>
+  </div>
+
+  <div class="container">
+    <!-- Section for Dashboard -->
+    <div id="Dashboard" class="section active">
+      <h2>Dashboard</h2>
+      <p>Selamat datang di Dashboard. Di sini Anda dapat melihat data sekolah dan informasi penting lainnya.</p>
+    </div>
+  <div class="container">
+      <!-- Dashboard Section -->
+    <div id="Dashboard" class="section active">
+      <div class="dashboard">
+        <div class="card">
+          <div class="icon">&#128218;</div>
+          <h3>Jumlah Siswa</h3>
+          <p>229 Siswa</p>
+        </div>
+        <div class="card">
+          <div class="icon">&#127891;</div>
+          <h3>Program Unggulan</h3>
+          <p>5 Program</p>
+        </div>
+        <div class="card">
+          <div class="icon">&#128221;</div>
+          <h3>Berita Terbaru</h3>
+          <p>2 Berita</p>
+        </div>
+        <div class="card">
+          <div class="icon">&#127947;</div>
+          <h3>Ekstrakurikuler</h3>
+          <p>8 Kegiatan</p>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="charts-container">
+        <!-- Pie Chart for Student by Class -->
+        <div class="chart-box">
+          <h3>Jumlah Siswa per Kelas</h3>
+          <canvas id="studentPieChart" width="300" height="300"></canvas>
+          <script>
+            var ctx = document.getElementById('studentPieChart').getContext('2d');
+            var studentPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ['Kelas 10', 'Kelas 11', 'Kelas 12'],
+                datasets: [{
+                  label: 'Jumlah Siswa',
+                  data: [500, 600, 400],
+                  backgroundColor: ['#ff9999', '#66b3ff', '#99ff99'],
+                  hoverBackgroundColor: ['#ff6666', '#3399ff', '#66cc66'],
+                  borderWidth: 1
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: {
+                  position: 'top',
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function(tooltipItem) {
+                      var total = tooltipItem.dataset._meta[Object.keys(tooltipItem.dataset._meta)[0]].total;
+                      var currentValue = tooltipItem.raw;
+                      var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
+                      return tooltipItem.label + ': ' + currentValue + ' Siswa (' + percentage + '%)';
+                    }
+                  }
+                }
+              }
+            }
+          });
+        </script>
+        <div>
+          <h4>Total Jumlah Siswa pertingkatan</h4>
+          <p><strong>Jumlah siswa:</strong> 227 Siswa</p>
+        </div>
+      </div>
+
+      <!-- Line Chart for Student Over 5 Years -->
+      <div class="chart-box">
+        <h3>Jumlah Siswa Selama 5 Tahun Terakhir</h3>
+        <canvas id="studentLineChart" width="400" height="300"></canvas>
+        <script>
+          var ctxLine = document.getElementById('studentLineChart').getContext('2d');
+          var studentLineChart = new Chart(ctxLine, {
+            type: 'line',
+            data: {
+              labels: ['2020', '2021', '2022', '2023', '2025'],
+              datasets: [{
+                label: 'Jumlah Siswa',
+                data: [230, 235, 260, 247, 227],
+                borderColor: '#66b3ff',
+                backgroundColor: 'rgba(102, 179, 255, 0.2)',
+                fill: true,
+                tension: 0.4
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: {
+                  display: false
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function(tooltipItem) {
+                      return tooltipItem.label + ': ' + tooltipItem.raw + ' Siswa';
+                    }
+                  }
+                }
+              },
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Tahun'
+                  }
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: 'Jumlah Siswa'
+                  },
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+        <div>
+          <h4>Total Jumlah Siswa selama 5 Tahun Terakhir</h4>
+          <p><strong>Total siswa (2020-2025):</strong> 1199 Siswa</p>
+        </div>
+      </div>
+      </div>
+    </div>
+      
+  <footer>
+    <p>&copy; 2025 SMA Negeri 15 Bulukumba. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to show the respective section based on the clicked link
+    function showSection(sectionId) {
+      // First hide all sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
